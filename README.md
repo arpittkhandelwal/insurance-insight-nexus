@@ -93,9 +93,16 @@ npm run dev
 
 ## Screenshots
 
-<img src="Screenshot 2026-09-21 at 9.57.59 PM.png" alt="Screenshot 1" width="800"/>
-<img src="Screenshot 2026-09-21 at 9.58.12 PM.png" alt="Screenshot 2" width="800"/>
-<img src="Screenshot 2026-09-21 at 9.58.24 PM.png" alt="Screenshot 3" width="800"/>
+<img src="screenshots/image1.png" alt="Screenshot 1" width="800"/>
+<img src="screenshots/image2.png" alt="Screenshot 2" width="800"/>
+<img src="screenshots/image3.png" alt="Screenshot 3" width="800"/>
+<img src="screenshots/image4.png" alt="Screenshot 4" width="800"/>
+<img src="screenshots/image5.png" alt="Screenshot 5" width="800"/>
+<img src="screenshots/image6.png" alt="Screenshot 6" width="800"/>
+<img src="screenshots/image7.png" alt="Screenshot 7" width="800"/>
+<img src="screenshots/image8.png" alt="Screenshot 8" width="800"/>
+<img src="screenshots/image9.png" alt="Screenshot 9" width="800"/>
+<img src="screenshots/image10.png" alt="Screenshot 10" width="800"/>
 
 ## Licensing
 
