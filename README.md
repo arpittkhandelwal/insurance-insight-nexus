@@ -1,109 +1,125 @@
-# Insurance Insight Nexus
+<div align="center">
+  <h1>🛡️ Insurance Insight Nexus 🚀</h1>
+  <p><b>A High-Performance, Agentic AI-Driven Analytics & Fraud Detection Platform</b></p>
 
-Insurance Insight Nexus is a high-performance, conversational analytics and fraud detection platform designed for modern insurance portfolios. It leverages an agentic AI architecture on top of an embedded analytical database to democratize data access for executives, data analysts, and compliance officers.
+  <!-- Badges -->
+  <p>
+    <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 18" />
+    <img src="https://img.shields.io/badge/FastAPI-0.100-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+    <img src="https://img.shields.io/badge/DuckDB-Analytical-FFD43B?style=for-the-badge&logo=duckdb&logoColor=black" alt="DuckDB" />
+    <img src="https://img.shields.io/badge/AWS_CDK-IaC-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS CDK" />
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License" />
+  </p>
+</div>
 
-## Architecture & Technology Stack
+<hr/>
 
-The platform is strictly divided into an interactive frontend, a highly optimized analytical backend, and a scalable cloud infrastructure framework.
+> [!TIP]
+> **Welcome to the future of insurance intelligence!** Nexus democratizes data access using an embedded analytical database and cutting-edge agentic workflows.
 
-### Frontend
-- Framework: React 18 with Vite
-- Styling: TailwindCSS
-- Visualization: Recharts, React-Globe, D3
-- State Management: React Query
+## 📑 Table of Contents
+- [✨ Architecture & Tech Stack](#-architecture--tech-stack)
+- [🔥 Key Capabilities](#-key-capabilities)
+- [🛡️ Security & Guardrails](#️-security--guardrails)
+- [🚀 Deployment Guide](#-deployment-guide)
+- [📸 Screenshots](#-screenshots)
+- [📜 Licensing](#-licensing)
 
-### Backend
-- Framework: FastAPI and Uvicorn
-- Data Layer: DuckDB (operating over Parquet files for sub-second analytical querying)
-- Data Processing: Pandas, NumPy
-- AI Core: Amazon Bedrock (Agentic intent mapping and dynamic SQL generation)
-- Speech-to-Text: Sarvam AI
+---
 
-### Infrastructure (AWS CDK)
-- Compute: Amazon ECS Fargate (Serverless Containers)
-- Networking: Application Load Balancer (ALB) and CloudFront
-- Storage: Amazon S3 (Frontend hosting)
-- Database: Amazon DynamoDB (Compliance Audit Logging)
-- Secrets: AWS Secrets Manager
+## ✨ Architecture & Tech Stack
 
-## Key Capabilities
+Nexus is strictly layered to ensure maximum performance, fault tolerance, and security.
 
-1. Natural Language Analytics (Ask Nexus)
-The platform features an advanced agentic workflow that translates natural language inquiries into secure, optimized SQL. The system autonomously maps intents, generates queries against the DuckDB data layer, selects appropriate visualization parameters, and provides immediate analytical insights without requiring manual data engineering.
+### 🌐 Frontend (The Interface)
+- **Framework**: React 18 & Vite ⚡
+- **Styling**: TailwindCSS 🎨
+- **Viz Magic**: Recharts, React-Globe, D3 📊
+- **State Mgmt**: React Query 🔄
 
-2. Fraud Network Visualization
-Instead of treating claims in isolation, the platform continuously scores incoming claims and constructs entity relationship networks. Investigators can visually identify coordinated fraud rings by analyzing shared providers, geographic hotspots, and linked policyholders.
+### 🧠 Backend (The Brains)
+- **Framework**: FastAPI & Uvicorn 🏎️
+- **Data Layer**: DuckDB + Parquet (Sub-second Analytics! 🦆)
+- **Processing**: Pandas, NumPy 🐍
+- **AI Core**: Amazon Bedrock (Agentic intent & SQL generation) 🤖
+- **Speech**: Sarvam AI 🎙️
 
-3. Human-in-the-Loop Compliance
-To ensure regulatory compliance within the financial sector, AI outputs are strictly treated as analytical insights, not final decisions. The platform enforces a Case Management queue where human investigators review high-risk flags. Every approval, rejection, or escalation is immutably written to a DynamoDB Audit Log.
+### ☁️ Infrastructure (AWS CDK)
+- **Compute**: Amazon ECS Fargate (Serverless 💪)
+- **Network**: Application Load Balancer & CloudFront 🌍
+- **Storage**: Amazon S3 🪣
+- **Database**: Amazon DynamoDB (Compliance Ledger 📒)
+- **Secrets**: AWS Secrets Manager 🔒
 
-4. Executive Command Center
-A unified dashboard delivering a real-time pulse of portfolio health, including live tracking of total policies, active claims, lapse rates, and immediate fraud exposure metrics.
+---
 
-## Security & Guardrails
+## 🔥 Key Capabilities
 
-- Dynamic SQL Validation: All AI-generated SQL undergoes strict AST validation to prevent data manipulation (blocking DELETE, DROP, INSERT, TRUNCATE) before execution.
-- Least Privilege Access: AWS IAM roles are precisely scoped. The ECS Task Role is granted exclusive access only to required Bedrock models and the specific DynamoDB audit table.
-- Infrastructure as Code: The entire environment is provisioned immutably via AWS CDK, ensuring repeatable, secure deployments with built-in rollback mechanisms.
+1. 🗣️ **Natural Language Analytics (Ask Nexus)**  
+   Agentic workflow translates plain English into optimized SQL. Dynamic parameter injection ensures immediate insights without manual data engineering.
 
-## Deployment Guide
+2. 🕸️ **Fraud Network Visualization**  
+   Automatically scores claims and builds entity relationship graphs to expose coordinated fraud rings via shared providers and hotspots.
 
-The deployment is fully automated using AWS CDK and is designed to run efficiently on an AWS account.
+3. 🧑‍⚖️ **Human-in-the-Loop Compliance**  
+   AI generates insights; humans make decisions. A Case Management queue ensures every approval/escalation is immutably logged to DynamoDB.
 
-### Prerequisites
-- AWS CLI configured with active credentials
-- Node.js (for AWS CDK and Frontend build)
-- Python 3.10+ (for Backend runtime)
-- Docker (for container builds)
+4. 📈 **Executive Command Center**  
+   A beautiful, real-time pulse of portfolio health: policies, claims, lapse rates, and fraud exposure!
 
-### Automated Deployment
-Execute the bootstrap and deployment script from the project root:
+---
+
+## 🛡️ Security & Guardrails
+
+> [!IMPORTANT]
+> Nexus is designed for financial sectors. Security is paramount.
+
+- **Dynamic SQL Validation**: Strict AST validation blocks destructive commands (`DELETE`, `DROP`, `INSERT`, `TRUNCATE`).
+- **Least Privilege Access**: IAM roles are scoped exclusively to required Bedrock models and DynamoDB tables.
+- **Immutable Infrastructure**: Provisioned via AWS CDK for repeatable, secure, and rollback-ready deployments.
+
+---
+
+## 🚀 Deployment Guide
+
+Deploying is fully automated via AWS CDK! Check out our [Full Deployment Guide](docs/DEPLOYMENT_GUIDE.md) for detailed steps.
+
+> [!NOTE]
+> **Prerequisites:**
+> - AWS CLI configured
+> - Node.js
+> - Python 3.10+
+> - Docker
 
 ```bash
+# 1. Set your region
 export AWS_REGION=us-east-2
+
+# 2. Let the magic happen!
 ./scripts/first_deploy.sh
 ```
 
-The script will sequentially:
-1. Provision an Amazon ECR repository.
-2. Build and push the FastAPI backend Docker image.
-3. Deploy the ECS Fargate cluster, ALB, and DynamoDB tables.
-4. Build the React frontend and sync it to the provisioned S3 bucket.
-5. Invalidate the CloudFront distribution to serve the latest application state.
+---
 
-### Local Development
+## 📸 Screenshots
 
-To run the platform locally without deploying to AWS:
+Take a look at Nexus in action:
 
-1. Backend:
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
-```
+<div align="center">
+  <img src="screenshots/image1.png" width="400" />
+  <img src="screenshots/image2.png" width="400" />
+  <img src="screenshots/image3.png" width="400" />
+  <img src="screenshots/image4.png" width="400" />
+  <img src="screenshots/image5.png" width="400" />
+  <img src="screenshots/image6.png" width="400" />
+  <img src="screenshots/image7.png" width="400" />
+  <img src="screenshots/image8.png" width="400" />
+  <img src="screenshots/image9.png" width="400" />
+  <img src="screenshots/image10.png" width="400" />
+</div>
 
-2. Frontend:
-```bash
-cd frontend
-npm install
-npm run dev
-```
+---
 
-## Screenshots
-
-<img src="screenshots/image1.png" alt="Screenshot 1" width="800"/>
-<img src="screenshots/image2.png" alt="Screenshot 2" width="800"/>
-<img src="screenshots/image3.png" alt="Screenshot 3" width="800"/>
-<img src="screenshots/image4.png" alt="Screenshot 4" width="800"/>
-<img src="screenshots/image5.png" alt="Screenshot 5" width="800"/>
-<img src="screenshots/image6.png" alt="Screenshot 6" width="800"/>
-<img src="screenshots/image7.png" alt="Screenshot 7" width="800"/>
-<img src="screenshots/image8.png" alt="Screenshot 8" width="800"/>
-<img src="screenshots/image9.png" alt="Screenshot 9" width="800"/>
-<img src="screenshots/image10.png" alt="Screenshot 10" width="800"/>
-
-## Licensing
+## 📜 Licensing
 
 This project is provided for hackathon demonstration purposes. Ensure all dependencies and cloud resources comply with your organizational security policies before adopting in production.
