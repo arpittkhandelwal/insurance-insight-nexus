@@ -1,0 +1,66 @@
+{
+  "tables": {
+    "weather_events": {
+      "rows": 30,
+      "cols": 8,
+      "size_bytes": 6735,
+      "date_range": "2020-01-01 to 2024-12-01"
+    },
+    "adjusters": {
+      "rows": 200,
+      "cols": 6,
+      "size_bytes": 10218,
+      "date_range": "N/A"
+    },
+    "agents": {
+      "rows": 500,
+      "cols": 9,
+      "size_bytes": 24390,
+      "date_range": "N/A"
+    },
+    "fraud_labels": {
+      "rows": 120000,
+      "cols": 3,
+      "size_bytes": 773032,
+      "date_range": "N/A"
+    },
+    "policies": {
+      "rows": 80400,
+      "cols": 15,
+      "size_bytes": 3305995,
+      "date_range": "2020-01-01 to 2024-06-30"
+    },
+    "providers": {
+      "rows": 2000,
+      "cols": 12,
+      "size_bytes": 69593,
+      "date_range": "N/A"
+    },
+    "claims": {
+      "rows": 120600,
+      "cols": 26,
+      "size_bytes": 5272358,
+      "date_range": "2020-01-06 to 2024-12-31"
+    },
+    "kpi_snapshots": {
+      "rows": 60,
+      "cols": 9,
+      "size_bytes": 9391,
+      "date_range": "N/A"
+    },
+    "customers": {
+      "rows": 50250,
+      "cols": 19,
+      "size_bytes": 2760378,
+      "date_range": "N/A"
+    }
+  },
+  "total_policies": 80400,
+  "total_customers": 39946,
+  "lapse_rate": "N/A",
+  "total_claims": 120600,
+  "total_claims_paid": null,
+  "avg_settlement_days": "N/A",
+  "fraud_flagged_count": "N/A",
+  "fraud_exposure": "N/A"
+}

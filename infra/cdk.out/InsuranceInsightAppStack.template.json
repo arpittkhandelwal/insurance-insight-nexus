@@ -1,0 +1,1278 @@
+{
+ "Resources": {
+  "SarvamSecretC37BA0EC": {
+   "Type": "AWS::SecretsManager::Secret",
+   "Properties": {
+    "Description": "API Key for Sarvam AI",
+    "GenerateSecretString": {},
+    "Name": "insurance-nexus/sarvam-api-key"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/SarvamSecret/Resource"
+   }
+  },
+  "AuditTableB07F8EEB": {
+   "Type": "AWS::DynamoDB::Table",
+   "Properties": {
+    "AttributeDefinitions": [
+     {
+      "AttributeName": "pk",
+      "AttributeType": "S"
+     },
+     {
+      "AttributeName": "sk",
+      "AttributeType": "S"
+     }
+    ],
+    "BillingMode": "PAY_PER_REQUEST",
+    "KeySchema": [
+     {
+      "AttributeName": "pk",
+      "KeyType": "HASH"
+     },
+     {
+      "AttributeName": "sk",
+      "KeyType": "RANGE"
+     }
+    ],
+    "TableName": "InsureNexus-AuditLog"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/AuditTable/Resource"
+   }
+  },
+  "NexusVpc88FCF4B5": {
+   "Type": "AWS::EC2::VPC",
+   "Properties": {
+    "CidrBlock": "10.0.0.0/16",
+    "EnableDnsHostnames": true,
+    "EnableDnsSupport": true,
+    "InstanceTenancy": "default",
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "InsuranceInsightAppStack/NexusVpc"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/NexusVpc/Resource"
+   }
+  },
+  "NexusVpcPublicSubnet1SubnetE9292C67": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1a",
+    "CidrBlock": "10.0.0.0/24",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "Name",
+      "Value": "InsuranceInsightAppStack/NexusVpc/PublicSubnet1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NexusVpc88FCF4B5"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/NexusVpc/PublicSubnet1/Subnet"
+   }
+  },
+  "NexusVpcPublicSubnet1RouteTable40E4CA1C": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "InsuranceInsightAppStack/NexusVpc/PublicSubnet1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NexusVpc88FCF4B5"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/NexusVpc/PublicSubnet1/RouteTable"
+   }
+  },
+  "NexusVpcPublicSubnet1RouteTableAssociation6A1A6889": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NexusVpcPublicSubnet1RouteTable40E4CA1C"
+    },
+    "SubnetId": {
+     "Ref": "NexusVpcPublicSubnet1SubnetE9292C67"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/NexusVpc/PublicSubnet1/RouteTableAssociation"
+   }
+  },
+  "NexusVpcPublicSubnet1DefaultRoute9E873A1C": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "NexusVpcIGW3D0250D1"
+    },
+    "RouteTableId": {
+     "Ref": "NexusVpcPublicSubnet1RouteTable40E4CA1C"
+    }
+   },
+   "DependsOn": [
+    "NexusVpcVPCGW359F49A5"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/NexusVpc/PublicSubnet1/DefaultRoute"
+   }
+  },
+  "NexusVpcPublicSubnet2Subnet4D9CEF81": {
+   "Type": "AWS::EC2::Subnet",
+   "Properties": {
+    "AvailabilityZone": "dummy1b",
+    "CidrBlock": "10.0.1.0/24",
+    "MapPublicIpOnLaunch": true,
+    "Tags": [
+     {
+      "Key": "aws-cdk:subnet-name",
+      "Value": "Public"
+     },
+     {
+      "Key": "aws-cdk:subnet-type",
+      "Value": "Public"
+     },
+     {
+      "Key": "Name",
+      "Value": "InsuranceInsightAppStack/NexusVpc/PublicSubnet2"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NexusVpc88FCF4B5"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/NexusVpc/PublicSubnet2/Subnet"
+   }
+  },
+  "NexusVpcPublicSubnet2RouteTableD3E54F3B": {
+   "Type": "AWS::EC2::RouteTable",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "InsuranceInsightAppStack/NexusVpc/PublicSubnet2"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NexusVpc88FCF4B5"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/NexusVpc/PublicSubnet2/RouteTable"
+   }
+  },
+  "NexusVpcPublicSubnet2RouteTableAssociation00B67822": {
+   "Type": "AWS::EC2::SubnetRouteTableAssociation",
+   "Properties": {
+    "RouteTableId": {
+     "Ref": "NexusVpcPublicSubnet2RouteTableD3E54F3B"
+    },
+    "SubnetId": {
+     "Ref": "NexusVpcPublicSubnet2Subnet4D9CEF81"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/NexusVpc/PublicSubnet2/RouteTableAssociation"
+   }
+  },
+  "NexusVpcPublicSubnet2DefaultRoute06343B47": {
+   "Type": "AWS::EC2::Route",
+   "Properties": {
+    "DestinationCidrBlock": "0.0.0.0/0",
+    "GatewayId": {
+     "Ref": "NexusVpcIGW3D0250D1"
+    },
+    "RouteTableId": {
+     "Ref": "NexusVpcPublicSubnet2RouteTableD3E54F3B"
+    }
+   },
+   "DependsOn": [
+    "NexusVpcVPCGW359F49A5"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/NexusVpc/PublicSubnet2/DefaultRoute"
+   }
+  },
+  "NexusVpcIGW3D0250D1": {
+   "Type": "AWS::EC2::InternetGateway",
+   "Properties": {
+    "Tags": [
+     {
+      "Key": "Name",
+      "Value": "InsuranceInsightAppStack/NexusVpc"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/NexusVpc/IGW"
+   }
+  },
+  "NexusVpcVPCGW359F49A5": {
+   "Type": "AWS::EC2::VPCGatewayAttachment",
+   "Properties": {
+    "InternetGatewayId": {
+     "Ref": "NexusVpcIGW3D0250D1"
+    },
+    "VpcId": {
+     "Ref": "NexusVpc88FCF4B5"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/NexusVpc/VPCGW"
+   }
+  },
+  "NexusClusterDB4577CB": {
+   "Type": "AWS::ECS::Cluster",
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/NexusCluster/Resource"
+   }
+  },
+  "EcsTaskRole8DFA0181": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/EcsTaskRole/Resource"
+   }
+  },
+  "EcsTaskRoleDefaultPolicy50882C77": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream",
+        "bedrock:Converse",
+        "bedrock:ConverseStream"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "secretsmanager:GetSecretValue",
+        "secretsmanager:DescribeSecret"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Ref": "SarvamSecretC37BA0EC"
+       }
+      },
+      {
+       "Action": [
+        "dynamodb:BatchGetItem",
+        "dynamodb:Query",
+        "dynamodb:GetItem",
+        "dynamodb:Scan",
+        "dynamodb:ConditionCheckItem",
+        "dynamodb:BatchWriteItem",
+        "dynamodb:PutItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:DeleteItem",
+        "dynamodb:DescribeTable"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "AuditTableB07F8EEB",
+          "Arn"
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "dynamodb:GetRecords",
+        "dynamodb:GetShardIterator"
+       ],
+       "Effect": "Allow",
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "AuditTableB07F8EEB",
+          "Arn"
+         ]
+        }
+       ]
+      },
+      {
+       "Action": [
+        "s3:GetObject",
+        "s3:ListBucket"
+       ],
+       "Effect": "Allow",
+       "Resource": "*"
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "EcsTaskRoleDefaultPolicy50882C77",
+    "Roles": [
+     {
+      "Ref": "EcsTaskRole8DFA0181"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/EcsTaskRole/DefaultPolicy/Resource"
+   }
+  },
+  "BackendServiceLB09608E98": {
+   "Type": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+   "Properties": {
+    "LoadBalancerAttributes": [
+     {
+      "Key": "deletion_protection.enabled",
+      "Value": "false"
+     }
+    ],
+    "Scheme": "internet-facing",
+    "SecurityGroups": [
+     {
+      "Fn::GetAtt": [
+       "BackendServiceLBSecurityGroup2B9BA648",
+       "GroupId"
+      ]
+     }
+    ],
+    "Subnets": [
+     {
+      "Ref": "NexusVpcPublicSubnet1SubnetE9292C67"
+     },
+     {
+      "Ref": "NexusVpcPublicSubnet2Subnet4D9CEF81"
+     }
+    ],
+    "Type": "application"
+   },
+   "DependsOn": [
+    "NexusVpcPublicSubnet1DefaultRoute9E873A1C",
+    "NexusVpcPublicSubnet1RouteTableAssociation6A1A6889",
+    "NexusVpcPublicSubnet2DefaultRoute06343B47",
+    "NexusVpcPublicSubnet2RouteTableAssociation00B67822"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/BackendService/LB/Resource"
+   }
+  },
+  "BackendServiceLBSecurityGroup2B9BA648": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "Automatically created Security Group for ELB InsuranceInsightAppStackBackendServiceLBE0BF3357",
+    "SecurityGroupIngress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow from anyone on port 80",
+      "FromPort": 80,
+      "IpProtocol": "tcp",
+      "ToPort": 80
+     }
+    ],
+    "VpcId": {
+     "Ref": "NexusVpc88FCF4B5"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/BackendService/LB/SecurityGroup/Resource"
+   }
+  },
+  "BackendServiceLBSecurityGrouptoInsuranceInsightAppStackBackendServiceSecurityGroup0D8303578080D7B09B7A": {
+   "Type": "AWS::EC2::SecurityGroupEgress",
+   "Properties": {
+    "Description": "Load balancer to target",
+    "DestinationSecurityGroupId": {
+     "Fn::GetAtt": [
+      "BackendServiceSecurityGroup7599F85E",
+      "GroupId"
+     ]
+    },
+    "FromPort": 8080,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "BackendServiceLBSecurityGroup2B9BA648",
+      "GroupId"
+     ]
+    },
+    "IpProtocol": "tcp",
+    "ToPort": 8080
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/BackendService/LB/SecurityGroup/to InsuranceInsightAppStackBackendServiceSecurityGroup0D830357:8080"
+   }
+  },
+  "BackendServiceLBPublicListener2FA7FC98": {
+   "Type": "AWS::ElasticLoadBalancingV2::Listener",
+   "Properties": {
+    "DefaultActions": [
+     {
+      "TargetGroupArn": {
+       "Ref": "BackendServiceLBPublicListenerECSGroupD43CD2AB"
+      },
+      "Type": "forward"
+     }
+    ],
+    "LoadBalancerArn": {
+     "Ref": "BackendServiceLB09608E98"
+    },
+    "Port": 80,
+    "Protocol": "HTTP"
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/BackendService/LB/PublicListener/Resource"
+   }
+  },
+  "BackendServiceLBPublicListenerECSGroupD43CD2AB": {
+   "Type": "AWS::ElasticLoadBalancingV2::TargetGroup",
+   "Properties": {
+    "HealthCheckIntervalSeconds": 30,
+    "HealthCheckPath": "/api/health",
+    "HealthCheckTimeoutSeconds": 5,
+    "Matcher": {
+     "HttpCode": "200-399"
+    },
+    "Port": 80,
+    "Protocol": "HTTP",
+    "TargetGroupAttributes": [
+     {
+      "Key": "stickiness.enabled",
+      "Value": "false"
+     }
+    ],
+    "TargetType": "ip",
+    "VpcId": {
+     "Ref": "NexusVpc88FCF4B5"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/BackendService/LB/PublicListener/ECSGroup/Resource"
+   }
+  },
+  "BackendServiceTaskDef9F97F56B": {
+   "Type": "AWS::ECS::TaskDefinition",
+   "Properties": {
+    "ContainerDefinitions": [
+     {
+      "Environment": [
+       {
+        "Name": "LLM_PROVIDER",
+        "Value": "bedrock"
+       },
+       {
+        "Name": "BEDROCK_MODEL_ID",
+        "Value": "anthropic.claude-3-5-sonnet-20241022-v2:0"
+       },
+       {
+        "Name": "AWS_REGION",
+        "Value": "ap-south-1"
+       },
+       {
+        "Name": "ALLOWED_ORIGINS",
+        "Value": "*"
+       }
+      ],
+      "Essential": true,
+      "Image": {
+       "Fn::Join": [
+        "",
+        [
+         {
+          "Fn::Select": [
+           4,
+           {
+            "Fn::Split": [
+             ":",
+             {
+              "Fn::ImportValue": "InsuranceInsightEcrStack:ExportsOutputFnGetAttBackendRepo7FFBAD06Arn33FD1219"
+             }
+            ]
+           }
+          ]
+         },
+         ".dkr.ecr.",
+         {
+          "Fn::Select": [
+           3,
+           {
+            "Fn::Split": [
+             ":",
+             {
+              "Fn::ImportValue": "InsuranceInsightEcrStack:ExportsOutputFnGetAttBackendRepo7FFBAD06Arn33FD1219"
+             }
+            ]
+           }
+          ]
+         },
+         ".",
+         {
+          "Ref": "AWS::URLSuffix"
+         },
+         "/",
+         {
+          "Fn::ImportValue": "InsuranceInsightEcrStack:ExportsOutputRefBackendRepo7FFBAD06405267DF"
+         },
+         ":latest"
+        ]
+       ]
+      },
+      "LogConfiguration": {
+       "LogDriver": "awslogs",
+       "Options": {
+        "awslogs-group": {
+         "Ref": "BackendServiceTaskDefwebLogGroup614D1BFF"
+        },
+        "awslogs-stream-prefix": "BackendService",
+        "awslogs-region": "ap-south-1"
+       }
+      },
+      "Name": "web",
+      "PortMappings": [
+       {
+        "ContainerPort": 8080,
+        "Protocol": "tcp"
+       }
+      ],
+      "Secrets": [
+       {
+        "Name": "SARVAM_API_KEY",
+        "ValueFrom": {
+         "Ref": "SarvamSecretC37BA0EC"
+        }
+       }
+      ]
+     }
+    ],
+    "Cpu": "1024",
+    "ExecutionRoleArn": {
+     "Fn::GetAtt": [
+      "BackendServiceTaskDefExecutionRole15BE46B5",
+      "Arn"
+     ]
+    },
+    "Family": "InsuranceInsightAppStackBackendServiceTaskDefE1C30B68",
+    "Memory": "2048",
+    "NetworkMode": "awsvpc",
+    "RequiresCompatibilities": [
+     "FARGATE"
+    ],
+    "TaskRoleArn": {
+     "Fn::GetAtt": [
+      "EcsTaskRole8DFA0181",
+      "Arn"
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/BackendService/TaskDef/Resource"
+   }
+  },
+  "BackendServiceTaskDefwebLogGroup614D1BFF": {
+   "Type": "AWS::Logs::LogGroup",
+   "UpdateReplacePolicy": "Retain",
+   "DeletionPolicy": "Retain",
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/BackendService/TaskDef/web/LogGroup/Resource"
+   }
+  },
+  "BackendServiceTaskDefExecutionRole15BE46B5": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "ecs-tasks.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/BackendService/TaskDef/ExecutionRole/Resource"
+   }
+  },
+  "BackendServiceTaskDefExecutionRoleDefaultPolicyDFB9BC56": {
+   "Type": "AWS::IAM::Policy",
+   "Properties": {
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "ecr:BatchCheckLayerAvailability",
+        "ecr:GetDownloadUrlForLayer",
+        "ecr:BatchGetImage"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::ImportValue": "InsuranceInsightEcrStack:ExportsOutputFnGetAttBackendRepo7FFBAD06Arn33FD1219"
+       }
+      },
+      {
+       "Action": "ecr:GetAuthorizationToken",
+       "Effect": "Allow",
+       "Resource": "*"
+      },
+      {
+       "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Fn::GetAtt": [
+         "BackendServiceTaskDefwebLogGroup614D1BFF",
+         "Arn"
+        ]
+       }
+      },
+      {
+       "Action": [
+        "secretsmanager:GetSecretValue",
+        "secretsmanager:DescribeSecret"
+       ],
+       "Effect": "Allow",
+       "Resource": {
+        "Ref": "SarvamSecretC37BA0EC"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "PolicyName": "BackendServiceTaskDefExecutionRoleDefaultPolicyDFB9BC56",
+    "Roles": [
+     {
+      "Ref": "BackendServiceTaskDefExecutionRole15BE46B5"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/BackendService/TaskDef/ExecutionRole/DefaultPolicy/Resource"
+   }
+  },
+  "BackendService2147DAF9": {
+   "Type": "AWS::ECS::Service",
+   "Properties": {
+    "Cluster": {
+     "Ref": "NexusClusterDB4577CB"
+    },
+    "DeploymentConfiguration": {
+     "Alarms": {
+      "AlarmNames": [],
+      "Enable": false,
+      "Rollback": false
+     },
+     "DeploymentCircuitBreaker": {
+      "Enable": true,
+      "Rollback": true
+     },
+     "MaximumPercent": 200,
+     "MinimumHealthyPercent": 50
+    },
+    "DeploymentController": {
+     "Type": "ECS"
+    },
+    "DesiredCount": 1,
+    "EnableECSManagedTags": false,
+    "HealthCheckGracePeriodSeconds": 60,
+    "LaunchType": "FARGATE",
+    "LoadBalancers": [
+     {
+      "ContainerName": "web",
+      "ContainerPort": 8080,
+      "TargetGroupArn": {
+       "Ref": "BackendServiceLBPublicListenerECSGroupD43CD2AB"
+      }
+     }
+    ],
+    "NetworkConfiguration": {
+     "AwsvpcConfiguration": {
+      "AssignPublicIp": "ENABLED",
+      "SecurityGroups": [
+       {
+        "Fn::GetAtt": [
+         "BackendServiceSecurityGroup7599F85E",
+         "GroupId"
+        ]
+       }
+      ],
+      "Subnets": [
+       {
+        "Ref": "NexusVpcPublicSubnet1SubnetE9292C67"
+       },
+       {
+        "Ref": "NexusVpcPublicSubnet2Subnet4D9CEF81"
+       }
+      ]
+     }
+    },
+    "TaskDefinition": {
+     "Ref": "BackendServiceTaskDef9F97F56B"
+    }
+   },
+   "DependsOn": [
+    "BackendServiceLBPublicListenerECSGroupD43CD2AB",
+    "BackendServiceLBPublicListener2FA7FC98",
+    "EcsTaskRoleDefaultPolicy50882C77",
+    "EcsTaskRole8DFA0181"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/BackendService/Service/Service"
+   }
+  },
+  "BackendServiceSecurityGroup7599F85E": {
+   "Type": "AWS::EC2::SecurityGroup",
+   "Properties": {
+    "GroupDescription": "InsuranceInsightAppStack/BackendService/Service/SecurityGroup",
+    "SecurityGroupEgress": [
+     {
+      "CidrIp": "0.0.0.0/0",
+      "Description": "Allow all outbound traffic by default",
+      "IpProtocol": "-1"
+     }
+    ],
+    "VpcId": {
+     "Ref": "NexusVpc88FCF4B5"
+    }
+   },
+   "DependsOn": [
+    "EcsTaskRoleDefaultPolicy50882C77",
+    "EcsTaskRole8DFA0181"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/BackendService/Service/SecurityGroup/Resource"
+   }
+  },
+  "BackendServiceSecurityGroupfromInsuranceInsightAppStackBackendServiceLBSecurityGroupA588583E8080DA9CCA81": {
+   "Type": "AWS::EC2::SecurityGroupIngress",
+   "Properties": {
+    "Description": "Load balancer to target",
+    "FromPort": 8080,
+    "GroupId": {
+     "Fn::GetAtt": [
+      "BackendServiceSecurityGroup7599F85E",
+      "GroupId"
+     ]
+    },
+    "IpProtocol": "tcp",
+    "SourceSecurityGroupId": {
+     "Fn::GetAtt": [
+      "BackendServiceLBSecurityGroup2B9BA648",
+      "GroupId"
+     ]
+    },
+    "ToPort": 8080
+   },
+   "DependsOn": [
+    "EcsTaskRoleDefaultPolicy50882C77",
+    "EcsTaskRole8DFA0181"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/BackendService/Service/SecurityGroup/from InsuranceInsightAppStackBackendServiceLBSecurityGroupA588583E:8080"
+   }
+  },
+  "FrontendBucketEFE2E19C": {
+   "Type": "AWS::S3::Bucket",
+   "Properties": {
+    "BucketEncryption": {
+     "ServerSideEncryptionConfiguration": [
+      {
+       "ServerSideEncryptionByDefault": {
+        "SSEAlgorithm": "AES256"
+       }
+      }
+     ]
+    },
+    "PublicAccessBlockConfiguration": {
+     "BlockPublicAcls": true,
+     "BlockPublicPolicy": true,
+     "IgnorePublicAcls": true,
+     "RestrictPublicBuckets": true
+    },
+    "Tags": [
+     {
+      "Key": "aws-cdk:auto-delete-objects",
+      "Value": "true"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/FrontendBucket/Resource"
+   }
+  },
+  "FrontendBucketPolicy1DFF75D9": {
+   "Type": "AWS::S3::BucketPolicy",
+   "Properties": {
+    "Bucket": {
+     "Ref": "FrontendBucketEFE2E19C"
+    },
+    "PolicyDocument": {
+     "Statement": [
+      {
+       "Action": [
+        "s3:PutBucketPolicy",
+        "s3:GetBucket*",
+        "s3:List*",
+        "s3:DeleteObject*"
+       ],
+       "Effect": "Allow",
+       "Principal": {
+        "AWS": {
+         "Fn::GetAtt": [
+          "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+          "Arn"
+         ]
+        }
+       },
+       "Resource": [
+        {
+         "Fn::GetAtt": [
+          "FrontendBucketEFE2E19C",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::Join": [
+          "",
+          [
+           {
+            "Fn::GetAtt": [
+             "FrontendBucketEFE2E19C",
+             "Arn"
+            ]
+           },
+           "/*"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "Action": "s3:GetObject",
+       "Effect": "Allow",
+       "Principal": {
+        "CanonicalUser": {
+         "Fn::GetAtt": [
+          "DistributionOrigin1S3Origin5F5C0696",
+          "S3CanonicalUserId"
+         ]
+        }
+       },
+       "Resource": {
+        "Fn::Join": [
+         "",
+         [
+          {
+           "Fn::GetAtt": [
+            "FrontendBucketEFE2E19C",
+            "Arn"
+           ]
+          },
+          "/*"
+         ]
+        ]
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/FrontendBucket/Policy/Resource"
+   }
+  },
+  "FrontendBucketAutoDeleteObjectsCustomResourceDB860B32": {
+   "Type": "Custom::S3AutoDeleteObjects",
+   "Properties": {
+    "ServiceToken": {
+     "Fn::GetAtt": [
+      "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F",
+      "Arn"
+     ]
+    },
+    "BucketName": {
+     "Ref": "FrontendBucketEFE2E19C"
+    }
+   },
+   "DependsOn": [
+    "FrontendBucketPolicy1DFF75D9"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/FrontendBucket/AutoDeleteObjectsCustomResource/Default"
+   }
+  },
+  "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Version": "2012-10-17",
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ]
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Sub": "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role"
+   }
+  },
+  "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": "cdk-hnb659fds-assets-471195055789-ap-south-1",
+     "S3Key": "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6.zip"
+    },
+    "Timeout": 900,
+    "MemorySize": 128,
+    "Handler": "index.handler",
+    "Role": {
+     "Fn::GetAtt": [
+      "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+      "Arn"
+     ]
+    },
+    "Runtime": "nodejs24.x",
+    "Description": {
+     "Fn::Join": [
+      "",
+      [
+       "Lambda function for auto-deleting objects in ",
+       {
+        "Ref": "FrontendBucketEFE2E19C"
+       },
+       " S3 bucket."
+      ]
+     ]
+    }
+   },
+   "DependsOn": [
+    "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler",
+    "aws:asset:path": "asset.faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6",
+    "aws:asset:property": "Code"
+   }
+  },
+  "DistributionOrigin1S3Origin5F5C0696": {
+   "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
+   "Properties": {
+    "CloudFrontOriginAccessIdentityConfig": {
+     "Comment": "Identity for InsuranceInsightAppStackDistributionOrigin168DBB3C4"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/Distribution/Origin1/S3Origin/Resource"
+   }
+  },
+  "Distribution830FAC52": {
+   "Type": "AWS::CloudFront::Distribution",
+   "Properties": {
+    "DistributionConfig": {
+     "CacheBehaviors": [
+      {
+       "AllowedMethods": [
+        "GET",
+        "HEAD",
+        "OPTIONS",
+        "PUT",
+        "PATCH",
+        "POST",
+        "DELETE"
+       ],
+       "CachePolicyId": "4135ea2d-6df8-44a3-9df3-4b5a84be39ad",
+       "Compress": true,
+       "OriginRequestPolicyId": "b689b0a8-53d0-40ab-baf2-68738e2966ac",
+       "PathPattern": "/api/*",
+       "TargetOriginId": "InsuranceInsightAppStackDistributionOrigin24C33CF8E",
+       "ViewerProtocolPolicy": "redirect-to-https"
+      }
+     ],
+     "CustomErrorResponses": [
+      {
+       "ErrorCode": 403,
+       "ResponseCode": 200,
+       "ResponsePagePath": "/index.html"
+      },
+      {
+       "ErrorCode": 404,
+       "ResponseCode": 200,
+       "ResponsePagePath": "/index.html"
+      }
+     ],
+     "DefaultCacheBehavior": {
+      "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+      "Compress": true,
+      "TargetOriginId": "InsuranceInsightAppStackDistributionOrigin168DBB3C4",
+      "ViewerProtocolPolicy": "redirect-to-https"
+     },
+     "DefaultRootObject": "index.html",
+     "Enabled": true,
+     "HttpVersion": "http2",
+     "IPV6Enabled": true,
+     "Origins": [
+      {
+       "DomainName": {
+        "Fn::GetAtt": [
+         "FrontendBucketEFE2E19C",
+         "RegionalDomainName"
+        ]
+       },
+       "Id": "InsuranceInsightAppStackDistributionOrigin168DBB3C4",
+       "S3OriginConfig": {
+        "OriginAccessIdentity": {
+         "Fn::Join": [
+          "",
+          [
+           "origin-access-identity/cloudfront/",
+           {
+            "Ref": "DistributionOrigin1S3Origin5F5C0696"
+           }
+          ]
+         ]
+        }
+       }
+      },
+      {
+       "CustomOriginConfig": {
+        "OriginProtocolPolicy": "http-only",
+        "OriginReadTimeout": 60,
+        "OriginSSLProtocols": [
+         "TLSv1.2"
+        ]
+       },
+       "DomainName": {
+        "Fn::GetAtt": [
+         "BackendServiceLB09608E98",
+         "DNSName"
+        ]
+       },
+       "Id": "InsuranceInsightAppStackDistributionOrigin24C33CF8E"
+      }
+     ]
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/Distribution/Resource"
+   }
+  },
+  "NexusDashboard97947583": {
+   "Type": "AWS::CloudWatch::Dashboard",
+   "Properties": {
+    "DashboardBody": {
+     "Fn::Join": [
+      "",
+      [
+       "{\"widgets\":[{\"type\":\"metric\",\"width\":6,\"height\":6,\"x\":0,\"y\":0,\"properties\":{\"view\":\"timeSeries\",\"title\":\"ALB Requests\",\"region\":\"",
+       {
+        "Ref": "AWS::Region"
+       },
+       "\",\"metrics\":[[\"AWS/ApplicationELB\",\"RequestCount\",\"LoadBalancer\",\"",
+       {
+        "Fn::GetAtt": [
+         "BackendServiceLB09608E98",
+         "LoadBalancerFullName"
+        ]
+       },
+       "\"]],\"yAxis\":{}}},{\"type\":\"metric\",\"width\":6,\"height\":6,\"x\":6,\"y\":0,\"properties\":{\"view\":\"timeSeries\",\"title\":\"ALB 5xx Errors\",\"region\":\"",
+       {
+        "Ref": "AWS::Region"
+       },
+       "\",\"metrics\":[[\"AWS/ApplicationELB\",\"HTTPCode_ELB_5XX_Count\",\"LoadBalancer\",\"",
+       {
+        "Fn::GetAtt": [
+         "BackendServiceLB09608E98",
+         "LoadBalancerFullName"
+        ]
+       },
+       "\"]],\"yAxis\":{}}}]}"
+      ]
+     ]
+    },
+    "DashboardName": "InsuranceInsightNexus"
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/NexusDashboard/Resource"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/5VT227bMAz9luZZ0bp0QIG95bIWAQokSIq+DENBy4yjxpYMXZIFhv99lGQnbncB9qRD8lAkj6gJn9zf8tsbONmxyA/jUma82ToQB0au18aiMOhsBQoKNBSKNpvvVEIty88KKp1T2jNkJYZQBC1DMeHNSy2C62U9Z2uflVJsfaa6Gy5oo73DS3ryX31Ta7WQ4KRWF3IAS+XQEPMRHJ7g3JXprKmjIfYVKseoU2+kOz8a7euu9X84vhUGrf3NvVTRH8ayvJmX3lL1wOrhA5gCQsv2sMCdVLJv+KNHKwdSoRn4utwtmqMUSYQEWyah4s1GJ2niudYkYxw3odjSaw0uyGH5tK7JG+V60pDPoAQlMP9QAkuwToqSGFlkSFUc6b3+nB0HfWcPeZLmVx2nx4P4M1WmV+rFHpgtK3VBaj7p4hLuccvsHW9mXhzSjiT0vRlV8qdUo6+j4cqGXSV6DFmeqFPv9AJLdLjK3lA4O2p/sBS6Kji0/+PulED/xGFYsXB1y0hMn+8MPS9vFqSDkZmPr7syspBqKgTtzzInPu1U2hxKeAgJf2MMr+kKnMCJPRUAu880mDzSeqNt2Qat9iYt0cq72pN6tKC6Ggau+F1obfRR5mhmYJHRt0NHI1JjRcvWZ7fX6tMd//yF39+8WSnHxlOfFfJNOn8B1RwNRUsEAAA="
+   },
+   "Metadata": {
+    "aws:cdk:path": "InsuranceInsightAppStack/CDKMetadata/Default"
+   }
+  }
+ },
+ "Outputs": {
+  "BackendServiceLoadBalancerDNSE742582D": {
+   "Value": {
+    "Fn::GetAtt": [
+     "BackendServiceLB09608E98",
+     "DNSName"
+    ]
+   }
+  },
+  "BackendServiceServiceURLB1770053": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "http://",
+      {
+       "Fn::GetAtt": [
+        "BackendServiceLB09608E98",
+        "DNSName"
+       ]
+      }
+     ]
+    ]
+   }
+  },
+  "CloudFrontUrl": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "https://",
+      {
+       "Fn::GetAtt": [
+        "Distribution830FAC52",
+        "DomainName"
+       ]
+      }
+     ]
+    ]
+   }
+  },
+  "AlbUrl": {
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "http://",
+      {
+       "Fn::GetAtt": [
+        "BackendServiceLB09608E98",
+        "DNSName"
+       ]
+      }
+     ]
+    ]
+   }
+  },
+  "S3BucketName": {
+   "Value": {
+    "Ref": "FrontendBucketEFE2E19C"
+   }
+  },
+  "DynamoDBTableName": {
+   "Value": {
+    "Ref": "AuditTableB07F8EEB"
+   }
+  },
+  "EcsClusterName": {
+   "Value": {
+    "Ref": "NexusClusterDB4577CB"
+   }
+  },
+  "EcsServiceName": {
+   "Value": {
+    "Fn::GetAtt": [
+     "BackendService2147DAF9",
+     "Name"
+    ]
+   }
+  }
+ },
+ "Parameters": {
+  "BootstrapVersion": {
+   "Type": "AWS::SSM::Parameter::Value<String>",
+   "Default": "/cdk-bootstrap/hnb659fds/version",
+   "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+  }
+ },
+ "Rules": {
+  "CheckBootstrapVersion": {
+   "Assertions": [
+    {
+     "Assert": {
+      "Fn::Not": [
+       {
+        "Fn::Contains": [
+         [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+         ],
+         {
+          "Ref": "BootstrapVersion"
+         }
+        ]
+       }
+      ]
+     },
+     "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+    }
+   ]
+  }
+ }
+}

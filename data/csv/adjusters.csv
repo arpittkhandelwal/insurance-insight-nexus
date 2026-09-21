@@ -1,0 +1,201 @@
+adjuster_id,adjuster_name,specialisation,avg_settlement_days,caseload,state
+ADJ000001,Yachana Rao,Health,15.7,85,Delhi
+ADJ000002,Brijesh Dugar,Crop,95.3,130,Uttar Pradesh
+ADJ000003,Charvi Bajwa,Life,19.3,125,Andhra Pradesh
+ADJ000004,Yug Bandi,Home,70.4,160,Uttar Pradesh
+ADJ000005,Jatin Purohit,Health,54.8,49,Uttarakhand
+ADJ000006,Karan Madan,Home,16.8,50,Rajasthan
+ADJ000007,Faraj Borah,Health,114.7,127,Uttar Pradesh
+ADJ000008,Anmol Aurora,Travel,12.1,154,Maharashtra
+ADJ000009,Girish Raman,Life,57.7,181,West Bengal
+ADJ000010,Devika Naik,Marine,22.0,137,Maharashtra
+ADJ000011,Yauvani Bajaj,Motor,17.2,145,Karnataka
+ADJ000012,Anusha Shanker,Life,27.3,149,Karnataka
+ADJ000013,Harish Lalla,Health,95.3,144,Maharashtra
+ADJ000014,Krisha Manne,Life,111.8,192,Maharashtra
+ADJ000015,Girik Kapadia,Crop,95.0,48,Haryana
+ADJ000016,Arya Subramanian,Crop,74.6,171,Madhya Pradesh
+ADJ000017,Yashawini Konda,Health,68.6,120,Uttarakhand
+ADJ000018,Anay Taneja,Health,112.1,58,Andhra Pradesh
+ADJ000019,Kashish Chokshi,Health,111.2,158,Madhya Pradesh
+ADJ000020,Udarsh Bakshi,Home,98.5,33,Uttar Pradesh
+ADJ000021,Vincent Sekhon,Home,67.0,80,Uttar Pradesh
+ADJ000022,Vansha Chopra,Crop,79.2,54,Maharashtra
+ADJ000023,Gaurangi Dhawan,Crop,101.5,51,Karnataka
+ADJ000024,Girish Gara,Health,72.6,188,Maharashtra
+ADJ000025,Vrishti Krish,Travel,54.1,96,Uttar Pradesh
+ADJ000026,Lohit Rau,Home,95.1,141,Madhya Pradesh
+ADJ000027,Viraj Bhargava,Motor,19.6,67,Uttar Pradesh
+ADJ000028,Zayyan Sabharwal,Marine,66.0,94,Maharashtra
+ADJ000029,Geetika Dora,Health,85.2,97,Rajasthan
+ADJ000030,Ekanta Ray,Motor,25.3,194,Odisha
+ADJ000031,Amrita Kadakia,Travel,98.9,31,Rajasthan
+ADJ000032,Xalak Munshi,Marine,98.2,97,Maharashtra
+ADJ000033,Ekanta Shenoy,Crop,62.0,61,Bihar
+ADJ000034,Yoshita Bumb,Health,90.4,181,Uttar Pradesh
+ADJ000035,Pavani Brahmbhatt,Life,97.1,177,Maharashtra
+ADJ000036,Joshua Arya,Travel,51.1,41,West Bengal
+ADJ000037,Zinal Dara,Crop,94.5,190,Gujarat
+ADJ000038,Rudra Sarma,Crop,106.8,55,Chhattisgarh
+ADJ000039,Balvan Samra,Home,51.6,125,Karnataka
+ADJ000040,Onkar Vohra,Health,115.6,141,Uttar Pradesh
+ADJ000041,Logan Sahota,Marine,58.5,107,Uttar Pradesh
+ADJ000042,Aditya Minhas,Home,64.6,124,Tamil Nadu
+ADJ000043,Radhika Menon,Travel,17.0,62,Uttar Pradesh
+ADJ000044,Ekantika Prabhu,Travel,28.1,129,Jharkhand
+ADJ000045,Lohit Mannan,Crop,79.8,198,Rajasthan
+ADJ000046,Kamya Venkataraman,Home,116.6,32,Uttar Pradesh
+ADJ000047,Urmi Shere,Crop,44.0,118,Tamil Nadu
+ADJ000048,Ganga Deshmukh,Travel,96.5,170,West Bengal
+ADJ000049,Urvi Anne,Home,45.3,134,Maharashtra
+ADJ000050,Omaja Gola,Home,39.2,166,Gujarat
+ADJ000051,Upma Bhavsar,Home,58.9,150,Uttar Pradesh
+ADJ000052,Devika Guha,Home,46.9,45,Haryana
+ADJ000053,Girindra Yogi,Marine,93.5,145,Maharashtra
+ADJ000054,Ganga Chandra,Health,24.5,106,Tamil Nadu
+ADJ000055,Upadhriti Dugar,Home,95.6,198,Gujarat
+ADJ000056,Inaya Kara,Marine,42.4,132,Andhra Pradesh
+ADJ000057,Akshay Hans,Motor,21.3,52,Gujarat
+ADJ000058,Bhavani Sandhu,Travel,42.2,163,Uttar Pradesh
+ADJ000059,Jhalak Rau,Home,73.2,190,Maharashtra
+ADJ000060,Samaksh Brahmbhatt,Motor,20.7,155,Madhya Pradesh
+ADJ000061,Harshil Kalita,Travel,101.4,109,Uttar Pradesh
+ADJ000062,Pranav Lall,Marine,86.8,172,Maharashtra
+ADJ000063,Jonathan Vig,Health,106.1,169,Maharashtra
+ADJ000064,Ganga Malhotra,Life,106.2,197,Maharashtra
+ADJ000065,Shaurya Ganguly,Motor,34.7,32,Uttar Pradesh
+ADJ000066,Vincent Kalita,Travel,61.7,40,Rajasthan
+ADJ000067,Manan Dhar,Life,103.2,178,Uttar Pradesh
+ADJ000068,Vaishnavi Acharya,Crop,25.6,93,Tamil Nadu
+ADJ000069,Faras Ben,Crop,71.7,52,West Bengal
+ADJ000070,Yasti Sarraf,Crop,81.0,119,Tamil Nadu
+ADJ000071,Urmi Narain,Health,57.8,169,Maharashtra
+ADJ000072,Xiti Dalal,Crop,77.6,51,Jharkhand
+ADJ000073,Maya Purohit,Motor,94.3,111,Andhra Pradesh
+ADJ000074,Urvi Pant,Life,29.1,121,Jharkhand
+ADJ000075,Edhitha Wali,Travel,28.6,26,West Bengal
+ADJ000076,Tanish Ganesan,Travel,89.2,199,Rajasthan
+ADJ000077,Luke Sarkar,Life,108.6,159,Maharashtra
+ADJ000078,Vrishti Krishna,Home,88.0,26,West Bengal
+ADJ000079,Radhika Pall,Home,61.0,66,Kerala
+ADJ000080,Aryan Pau,Marine,89.4,90,Kerala
+ADJ000081,Hiral Samra,Travel,96.9,189,Andhra Pradesh
+ADJ000082,Rayaan Raja,Home,95.0,167,Maharashtra
+ADJ000083,Praneel Anne,Motor,101.9,109,Madhya Pradesh
+ADJ000084,Riya Patel,Life,44.4,48,Haryana
+ADJ000085,Abdul Mukherjee,Marine,29.7,142,Rajasthan
+ADJ000086,Girindra Pillay,Home,102.4,103,Maharashtra
+ADJ000087,Yadavi Arya,Travel,109.1,187,Delhi
+ADJ000088,Bahadurjit Maharaj,Marine,33.6,143,Uttar Pradesh
+ADJ000089,Mitali Bassi,Motor,42.4,134,Haryana
+ADJ000090,Anusha Bhandari,Home,98.1,97,Uttar Pradesh
+ADJ000091,Urishilla Sha,Health,43.3,26,Madhya Pradesh
+ADJ000092,Oscar Solanki,Marine,26.4,125,Karnataka
+ADJ000093,Balvan Pingle,Crop,62.4,179,Telangana
+ADJ000094,Michael Goel,Health,61.1,107,Rajasthan
+ADJ000095,Fitan Saini,Travel,37.5,66,West Bengal
+ADJ000096,Daksh Sawhney,Home,91.2,176,Bihar
+ADJ000097,Dipta Chatterjee,Motor,29.3,25,West Bengal
+ADJ000098,Rishi Badal,Health,67.5,166,West Bengal
+ADJ000099,Edhitha Gara,Health,71.5,46,Delhi
+ADJ000100,Zaitra Atwal,Health,113.4,75,Uttar Pradesh
+ADJ000101,Omaja Bhat,Motor,37.4,38,Punjab
+ADJ000102,Reyansh Thaker,Health,70.5,31,Punjab
+ADJ000103,Amara Chacko,Motor,42.2,72,Gujarat
+ADJ000104,Sachi Basu,Travel,52.8,188,Punjab
+ADJ000105,Rushil Tiwari,Crop,87.3,74,Bihar
+ADJ000106,Oscar Aggarwal,Travel,91.9,32,Telangana
+ADJ000107,Anusha Panchal,Motor,49.1,67,West Bengal
+ADJ000108,Harita Shukla,Marine,30.1,38,Madhya Pradesh
+ADJ000109,Ubika Chakrabarti,Crop,81.4,70,Tamil Nadu
+ADJ000110,Gautam Gopal,Life,77.2,114,Maharashtra
+ADJ000111,Quincy Nadkarni,Motor,14.6,156,Karnataka
+ADJ000112,Omkaar Anne,Health,46.3,143,Bihar
+ADJ000113,Kavya Sharma,Marine,88.3,82,Bihar
+ADJ000114,Yatin Morar,Marine,95.3,150,Rajasthan
+ADJ000115,Kevin Mukherjee,Motor,98.6,63,Gujarat
+ADJ000116,Ladli Mangat,Travel,87.7,183,Assam
+ADJ000117,Arya Dey,Crop,65.7,163,Maharashtra
+ADJ000118,Odika Kara,Health,76.7,95,Telangana
+ADJ000119,Anjali Iyengar,Home,40.0,181,Rajasthan
+ADJ000120,Chakrika Lad,Motor,84.2,143,Maharashtra
+ADJ000121,Aishani Chanda,Home,93.9,90,Jharkhand
+ADJ000122,Isha Patla,Life,70.0,57,Haryana
+ADJ000123,Shivani Garde,Health,15.7,25,Tamil Nadu
+ADJ000124,Lekha Dugal,Crop,60.0,195,Chhattisgarh
+ADJ000125,Radha Palan,Travel,38.8,167,West Bengal
+ADJ000126,Sarthak Oommen,Health,35.6,121,Maharashtra
+ADJ000127,Gautam Varghese,Health,95.7,80,Bihar
+ADJ000128,Aarna Kamdar,Health,94.4,174,Uttar Pradesh
+ADJ000129,Advika Balay,Life,35.3,181,Maharashtra
+ADJ000130,Zansi Grewal,Crop,51.5,172,Assam
+ADJ000131,Logan Sibal,Crop,36.6,72,Uttar Pradesh
+ADJ000132,Kashish Purohit,Motor,85.2,103,West Bengal
+ADJ000133,Ekantika Cheema,Life,93.7,73,Andhra Pradesh
+ADJ000134,Abhiram Dutt,Marine,27.8,38,Karnataka
+ADJ000135,Vaishnavi Natt,Travel,62.5,92,Haryana
+ADJ000136,Harish Grover,Health,84.5,31,Andhra Pradesh
+ADJ000137,Damini Gaba,Crop,112.2,165,Tamil Nadu
+ADJ000138,Quincy Bains,Life,82.3,127,Rajasthan
+ADJ000139,Tanmayi Saran,Marine,116.1,187,Madhya Pradesh
+ADJ000140,Urvashi Kohli,Travel,98.3,131,Andhra Pradesh
+ADJ000141,Kashvi Nazareth,Health,81.8,114,Tamil Nadu
+ADJ000142,Nandini Mital,Home,42.5,86,Delhi
+ADJ000143,Vivaan Tripathi,Life,111.1,120,Uttar Pradesh
+ADJ000144,Oviya Sandhu,Crop,38.4,84,Uttar Pradesh
+ADJ000145,Nandini Balakrishnan,Travel,65.6,150,Madhya Pradesh
+ADJ000146,Yauvani Ganesan,Marine,96.4,42,Rajasthan
+ADJ000147,Rushil Dewan,Marine,111.1,87,Tamil Nadu
+ADJ000148,Gauri Bhagat,Health,62.2,187,Maharashtra
+ADJ000149,Dayamai Dhaliwal,Life,115.6,188,West Bengal
+ADJ000150,Tara Randhawa,Travel,60.9,167,Gujarat
+ADJ000151,Triveni Acharya,Motor,113.2,89,Kerala
+ADJ000152,Sai Gera,Home,111.5,156,West Bengal
+ADJ000153,Damyanti Buch,Motor,71.1,190,Maharashtra
+ADJ000154,Warinder Jani,Life,34.0,197,Delhi
+ADJ000155,Gautam Konda,Marine,85.8,193,Manipur
+ADJ000156,Kavya Ahluwalia,Travel,66.5,43,West Bengal
+ADJ000157,Nathaniel Padmanabhan,Crop,54.5,128,Odisha
+ADJ000158,Urishilla Ramesh,Health,110.4,179,Madhya Pradesh
+ADJ000159,Urmi Puri,Life,40.7,129,Maharashtra
+ADJ000160,Xavier Char,Marine,68.5,59,Punjab
+ADJ000161,Kabir Nadkarni,Motor,39.9,80,Chhattisgarh
+ADJ000162,Mugdha Narain,Crop,88.3,45,Gujarat
+ADJ000163,Panini Ramesh,Life,119.9,41,Haryana
+ADJ000164,Idika Suresh,Life,77.0,181,Tamil Nadu
+ADJ000165,Tristan Gokhale,Travel,29.9,120,Uttar Pradesh
+ADJ000166,Jyoti Pathak,Motor,48.5,169,Uttar Pradesh
+ADJ000167,Yachana Agarwal,Motor,110.0,117,Uttar Pradesh
+ADJ000168,Faras Karpe,Travel,106.7,27,West Bengal
+ADJ000169,Xalak Guha,Crop,23.2,153,Uttar Pradesh
+ADJ000170,Siddharth Mittal,Travel,47.3,136,Uttar Pradesh
+ADJ000171,Girik Nori,Travel,103.8,121,Tamil Nadu
+ADJ000172,Pranit Sandal,Crop,117.3,71,Odisha
+ADJ000173,Bhavani Mukhopadhyay,Travel,54.4,113,Bihar
+ADJ000174,Vasana Banerjee,Crop,57.4,143,West Bengal
+ADJ000175,Oviya Gola,Travel,94.4,193,Haryana
+ADJ000176,Mitali Varughese,Travel,12.2,148,Uttar Pradesh
+ADJ000177,Udyati Butala,Life,113.0,108,Kerala
+ADJ000178,Harrison Ravel,Life,119.5,67,Maharashtra
+ADJ000179,Naveen Nagar,Motor,110.2,175,Maharashtra
+ADJ000180,Yashica Rajagopalan,Home,70.8,102,Uttar Pradesh
+ADJ000181,Advay Sunder,Home,46.1,193,Telangana
+ADJ000182,Pahal Bhagat,Motor,77.2,71,Uttar Pradesh
+ADJ000183,Pavani Kuruvilla,Crop,59.4,179,Kerala
+ADJ000184,Shravya Thakkar,Travel,24.7,65,Kerala
+ADJ000185,Urvashi Nayak,Health,56.1,176,Karnataka
+ADJ000186,Isaac Gola,Marine,33.7,153,Haryana
+ADJ000187,Leela Buch,Travel,19.0,188,Madhya Pradesh
+ADJ000188,Abhimanyu Nazareth,Health,35.3,123,Jharkhand
+ADJ000189,Rudra Varma,Life,48.0,59,Uttar Pradesh
+ADJ000190,Radhika Bava,Marine,56.0,97,Madhya Pradesh
+ADJ000191,Baghyawati Baral,Crop,22.9,193,Uttar Pradesh
+ADJ000192,Vrishti Sharma,Life,115.2,78,Karnataka
+ADJ000193,Chandresh Pingle,Marine,67.2,34,Gujarat
+ADJ000194,Pavani Nazareth,Travel,82.3,155,Tamil Nadu
+ADJ000195,Arjun Loke,Travel,87.9,54,Karnataka
+ADJ000196,Chaaya Parikh,Marine,90.5,199,Punjab
+ADJ000197,Anay Sekhon,Home,74.8,176,Odisha
+ADJ000198,Chameli Banik,Marine,84.6,62,Kerala
+ADJ000199,Ishanvi Bansal,Home,99.8,27,Assam
+ADJ000200,Yuvraj Gill,Travel,27.2,141,Maharashtra

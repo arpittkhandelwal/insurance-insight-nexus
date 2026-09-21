@@ -1,0 +1,31 @@
+event_id,event_name,event_type,start_date,end_date,states,severity,estimated_insured_loss_cr
+WX001,Kerala-Maharashtra-Assam Mega Flood 2022,Flood,2022-07-04,2022-07-24,"Kerala,Maharashtra,Assam",Extreme,2800.0
+WX002,Cyclone Biparjoy 2023,Cyclone,2023-06-10,2023-06-15,"Gujarat,Rajasthan",Severe,650.0
+WX003,North India Heatwave 2022,Heatwave,2022-04-28,2022-05-20,"Rajasthan,Uttar Pradesh,Haryana,Punjab",Extreme,120.0
+WX004,Tamil Nadu Cyclone Michaung 2023,Cyclone,2023-12-04,2023-12-08,"Tamil Nadu,Andhra Pradesh",Severe,450.0
+WX005,Maharashtra Flood 2021,Flood,2021-07-22,2021-08-05,Maharashtra,Major,980.0
+WX006,Himachal Pradesh Flood 2024,Flood,2024-12-01,2024-12-7,Himachal Pradesh,Severe,227.2
+WX007,Chhattisgarh Flood 2020,Flood,2020-01-01,2020-01-12,Chhattisgarh,Severe,570.1
+WX008,Assam Cyclone 2023,Heatwave,2023-06-01,2023-06-7,Assam,Moderate,379.7
+WX009,Chhattisgarh Cyclone 2020,Flood,2020-03-01,2020-03-20,Chhattisgarh,Severe,535.3
+WX010,West Bengal Drought 2021,Flood,2021-06-01,2021-06-14,West Bengal,Severe,438.6
+WX011,Gujarat Flood 2021,Flood,2021-07-01,2021-07-17,Gujarat,Minor,214.2
+WX012,Meghalaya Cyclone 2022,Flood,2022-09-01,2022-09-19,Meghalaya,Severe,387.4
+WX013,West Bengal Heatwave 2020,Heatwave,2020-02-01,2020-02-17,West Bengal,Major,313.9
+WX014,Gujarat Flood 2023,Cyclone,2023-10-01,2023-10-10,Gujarat,Minor,332.5
+WX015,Uttar Pradesh Heatwave 2024,Flood,2024-08-01,2024-08-10,Uttar Pradesh,Minor,476.0
+WX016,Meghalaya Drought 2021,Frost,2021-04-01,2021-04-10,Meghalaya,Major,140.1
+WX017,Uttar Pradesh Frost 2021,Flood,2021-05-01,2021-05-10,Uttar Pradesh,Minor,494.1
+WX018,Odisha Drought 2022,Flood,2022-05-01,2022-05-11,Odisha,Severe,59.8
+WX019,West Bengal Cyclone 2021,Flood,2021-04-01,2021-04-11,West Bengal,Minor,42.5
+WX020,Odisha Flood 2022,Drought,2022-10-01,2022-10-9,Odisha,Minor,590.2
+WX021,Madhya Pradesh Frost 2023,Heatwave,2023-04-01,2023-04-15,Madhya Pradesh,Major,390.4
+WX022,Madhya Pradesh Drought 2022,Heatwave,2022-02-01,2022-02-16,Madhya Pradesh,Major,449.1
+WX023,Telangana Flood 2022,Heatwave,2022-01-01,2022-01-15,Telangana,Major,211.8
+WX024,West Bengal Frost 2020,Drought,2020-09-01,2020-09-21,West Bengal,Major,56.0
+WX025,Bihar Drought 2020,Flood,2020-07-01,2020-07-13,Bihar,Major,396.7
+WX026,Uttarakhand Frost 2022,Cyclone,2022-08-01,2022-08-11,Uttarakhand,Moderate,269.6
+WX027,Karnataka Cyclone 2022,Drought,2022-08-01,2022-08-9,Karnataka,Moderate,181.3
+WX028,Himachal Pradesh Frost 2021,Heatwave,2021-06-01,2021-06-11,Himachal Pradesh,Severe,363.5
+WX029,Tamil Nadu Heatwave 2020,Cyclone,2020-12-01,2020-12-12,Tamil Nadu,Major,72.1
+WX030,Bihar Heatwave 2024,Heatwave,2024-05-01,2024-05-21,Bihar,Minor,549.6

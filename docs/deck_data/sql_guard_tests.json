@@ -1,0 +1,22 @@
+[
+  {
+    "input": "DROP TABLE claims",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/claims/execute_sql (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+  },
+  {
+    "input": "SELECT * FROM claims; DELETE FROM claims",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/claims/execute_sql (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+  },
+  {
+    "input": "SELECT * FROM policies",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/claims/execute_sql (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+  },
+  {
+    "input": "TRUNCATE customers",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/claims/execute_sql (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+  },
+  {
+    "input": "INSERT INTO fraud_labels VALUES (1,2,3)",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/claims/execute_sql (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8000): Failed to establish a new connection: [Errno 61] Connection refused\"))"
+  }
+]
