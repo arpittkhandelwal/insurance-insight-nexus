@@ -1,4 +1,4 @@
-# 🏛️ Insurance Insight Nexus Architecture
+# Insurance Insight Nexus Architecture
 
 <div align="center">
   <p><b>A Blueprint for Next-Generation Insurance Analytics</b></p>
@@ -6,7 +6,7 @@
 
 ---
 
-## 🎯 Overview
+## Overview
 
 Insurance Insight Nexus is a high-performance, AI-driven analytics platform for insurance carriers. It provides real-time insights into claims, fraud patterns, and portfolio risk.
 
@@ -15,7 +15,7 @@ Insurance Insight Nexus is a high-performance, AI-driven analytics platform for 
 
 ---
 
-## 🧱 The Architecture Diagram
+## The Architecture Diagram
 
 ```mermaid
 graph TD
@@ -27,23 +27,23 @@ graph TD
     classDef ai fill:#9C27B0,stroke:#4A148C,stroke-width:2px,color:white;
 
     %% Components
-    User((🧑‍💻 User))
+    User((User))
     
     subgraph "Frontend Layer"
-        CF[🌐 Amazon CloudFront]:::aws
-        S3[🪣 Amazon S3 (React SPA)]:::react
+        CF[Amazon CloudFront]:::aws
+        S3[Amazon S3 (React SPA)]:::react
     end
     
     subgraph "Compute Layer"
-        ALB[⚖️ Application Load Balancer]:::aws
-        ECS[🐳 ECS Fargate (FastAPI)]:::python
+        ALB[Application Load Balancer]:::aws
+        ECS[ECS Fargate (FastAPI)]:::python
     end
     
     subgraph "Data & AI Layer"
-        DuckDB[(🦆 DuckDB + Parquet)]:::db
-        Dynamo[(📒 DynamoDB Audit Log)]:::aws
-        Bedrock[🤖 Amazon Bedrock]:::ai
-        Sarvam[🎙️ Sarvam AI]:::ai
+        DuckDB[(DuckDB + Parquet)]:::db
+        Dynamo[(DynamoDB Audit Log)]:::aws
+        Bedrock[Amazon Bedrock]:::ai
+        Sarvam[Sarvam AI]:::ai
     end
 
     %% Flow
@@ -60,24 +60,24 @@ graph TD
 
 ---
 
-## 🧩 Deep Dive into Components
+## Deep Dive into Components
 
-### 🌐 Frontend (React 18 / Vite / Tailwind)
-- **Framework:** React 18 powered by Vite for ⚡ lightning-fast HMR and building.
+### Frontend (React 18 / Vite / Tailwind)
+- **Framework:** React 18 powered by Vite for lightning-fast HMR and building.
 - **Styling:** Beautiful and responsive Tailwind CSS with custom UI components (Tremor, Recharts).
 - **Hosting:** Served globally at the edge via **Amazon CloudFront** from an **S3 Bucket**.
 
-### 🧠 Backend (FastAPI / Uvicorn)
+### Backend (FastAPI / Uvicorn)
 - **API Framework:** FastAPI for asynchronous, high-performance HTTP endpoints.
 - **Agentic Engine:** A robust 10-step Natural Language to SQL engine. It translates human intent into complex DuckDB analytical queries.
 - **AI Resilience:** Fallback mechanism between Amazon Bedrock (Claude 3.5 Sonnet) and Sarvam AI ensures the demo **never** breaks.
 - **Compute Environment:** Containerized in Docker and run serverlessly on **Amazon ECS Fargate**.
 
-### 💾 Data Layer
+### Data Layer
 - **Analytical DB:** **DuckDB** operates directly over columnar Parquet files! No heavy database server needed—just raw speed.
 - **Compliance Storage:** **AWS DynamoDB** acts as an immutable ledger. Every Human-in-the-Loop decision (approvals/rejections) is logged permanently.
 
-### 🏗️ Infrastructure (AWS CDK)
+### Infrastructure (AWS CDK)
 > [!IMPORTANT]
 > Infrastructure is code! If it's not in the CDK, it doesn't exist.
 
@@ -87,10 +87,10 @@ graph TD
 
 ---
 
-## 🚦 System Flow in Action
+## System Flow in Action
 
-1. 🧑‍💻 A user opens the React SPA, served instantly from **CloudFront edge caches**.
-2. 🔄 API calls map seamlessly to `/api/*`, passing through CloudFront directly to the **Application Load Balancer**.
-3. 🐳 The ALB distributes traffic across serverless **ECS Fargate** tasks running FastAPI.
-4. 🤖 FastAPI orchestrates **Amazon Bedrock** for intelligent query generation and rips through Parquet files with **DuckDB**.
-5. 🛡️ User interactions (e.g., flagging a fraudulent claim) are immutably appended to **DynamoDB**.
+1. A user opens the React SPA, served instantly from **CloudFront edge caches**.
+2. API calls map seamlessly to `/api/*`, passing through CloudFront directly to the **Application Load Balancer**.
+3. The ALB distributes traffic across serverless **ECS Fargate** tasks running FastAPI.
+4. FastAPI orchestrates **Amazon Bedrock** for intelligent query generation and rips through Parquet files with **DuckDB**.
+5. User interactions (e.g., flagging a fraudulent claim) are immutably appended to **DynamoDB**.
