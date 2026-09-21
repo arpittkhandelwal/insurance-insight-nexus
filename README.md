@@ -91,6 +91,12 @@ npm install
 npm run dev
 ```
 
+## Screenshots
+
+<img src="Screenshot 2026-09-21 at 9.57.59 PM.png" alt="Screenshot 1" width="800"/>
+<img src="Screenshot 2026-09-21 at 9.58.12 PM.png" alt="Screenshot 2" width="800"/>
+<img src="Screenshot 2026-09-21 at 9.58.24 PM.png" alt="Screenshot 3" width="800"/>
+
 ## Licensing
 
 This project is provided for hackathon demonstration purposes. Ensure all dependencies and cloud resources comply with your organizational security policies before adopting in production.
